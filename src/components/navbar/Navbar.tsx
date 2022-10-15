@@ -3,11 +3,11 @@ import React from "react";
 
 export const Navbar = () => {
   return (
-    <div>
+    <div style={{height:'10vh'}}>
       <ul>
         <li className="flex justify-end">
           <a
-            href="/home"
+            href="/"
             className="m-4 transition duration-1000 hover:scale-125"
           >
             <Typography variant="h5">Home</Typography>

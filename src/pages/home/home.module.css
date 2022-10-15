@@ -3,7 +3,9 @@
 /* Language: css */
 .title {
   font-family: "Silkscreen", cursive;
+  font-size: 5em;
 }
 .desc {
   font-family: "Source Code Pro", monospace;
+  font-size: 2em;
 }
