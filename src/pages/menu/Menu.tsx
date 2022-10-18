@@ -16,7 +16,10 @@ export const Menu = () => {
   }, []);
   return (
     <div>
-      <div className="flex justify-center items-center">
+      <div
+        style={{ height: "500px" }}
+        className="flex justify-center items-center"
+      >
         {cat && !loading && (
           <img className={styles.cat} src={cat.url.toString()} alt="catLogo" />
         )}
