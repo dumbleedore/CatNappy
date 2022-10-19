@@ -1,0 +1,10 @@
+.cat {
+  max-width: 500px;
+  max-height: 500px;
+  min-width: 500px;
+  min-height: 500px;
+  border-radius: 10px;
+}
+.img-alt {
+  height: 500px;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import Cat from "../../interface/Cat";
 import { fetchCat } from "../../services/catService";
-import styles from "./menu.module.css";
+import "./index.css";
 export const Menu = () => {
   const [cat, setCat] = React.useState<Cat>();
   const [loading, setLoading] = React.useState(false);
@@ -16,12 +16,9 @@ export const Menu = () => {
   }, []);
   return (
     <div>
-      <div
-        style={{ height: "500px" }}
-        className="flex justify-center items-center"
-      >
+      <div className="flex justify-center items-center img-alt">
         {cat && !loading && (
-          <img className={styles.cat} src={cat.url.toString()} alt="catLogo" />
+          <img className="cat" src={cat.url.toString()} alt="catLogo" />
         )}
         {loading && (
           <div role="status">
