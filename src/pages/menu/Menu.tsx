@@ -4,15 +4,15 @@ import { fetchCat } from "../../services/catService";
 import "./index.css";
 export const Menu = () => {
   const [cat, setCat] = React.useState<Cat>();
-  const [loading, setLoading] = React.useState(false);
-  async function fetchAPI() {
+  const [loading, setLoading] = React.useState<Boolean>(false);
+  async function renderCat() {
     setLoading(true);
-    let response = await fetchCat();
-    setCat(response[0]);
+    const cat = await fetchCat();
+    setCat(cat.find((item: Cat) => item));
     setLoading(false);
   }
   React.useEffect(() => {
-    fetchAPI();
+    renderCat();
   }, []);
   return (
     <div>
@@ -44,7 +44,7 @@ export const Menu = () => {
       </div>
       <div className="flex justify-center items-center">
         <button
-          onClick={fetchAPI}
+          onClick={renderCat}
           className="rounded bg-black text-white p-5 mt-2 hover transition duration-1000 hover:transform hover:scale-110"
         >
           New Cat

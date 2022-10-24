@@ -14,10 +14,15 @@ export const Gallery = () => {
   return (
     <div>
       <div>
-        <div className="flex flex-wrap gap-1">
+        <div className="flex flex-wrap gap-1 min-height-90">
           {cats &&
             cats.map((cat) => (
-              <img className="item" key={cat.id} src={cat.url} alt="cat" />
+              <img
+                className="item rounded"
+                key={cat.id}
+                src={cat.url}
+                alt="cat"
+              />
             ))}
         </div>
         <div className="flex justify-center">
